@@ -1,0 +1,5 @@
+Programmet sliter viss bilder ligger inne i undermapper, sjekk om man kan bruke os.walk i stedet. 
+
+
+.filenames
+https://www.google.com/search?q=only+get+filename+os.walk&oq=only+get+filename+os.walk&aqs=chrome..69i57.5837j0j1&sourceid=chrome&ie=UTF-8

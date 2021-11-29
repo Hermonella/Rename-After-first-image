@@ -3,8 +3,8 @@ import exifread
 import re
 
 
-# Root_Folder = "C:\WORKFOLDER\Rename After first image\Testmappe\Importerte bilder"
-Root_Folder = input("Root Folder: ")
+Root_Folder = "C:\WORKFOLDER\Rename After first image\Testmappe\Importerte bilder"
+# Root_Folder = input("Root Folder: ")
 File_Extension = ".jpg",".jpeg",".png",".tiff",".JPG",".JPEG",".PNG",".TIFF"
 Folder_List = os.listdir(Root_Folder)
 
@@ -22,7 +22,7 @@ def Get_Exif_Date_Taken(Folder_To_Rename, Image_With_Exif):
 for folder in Folder_List:
     if not re.match(Check_for_aldready_dated_folders_patter, folder[:10]):
         Folder_To_Rename = Root_Folder + "\\" + folder
-        Image_List = [_ for _ in os.listdir(Folder_To_Rename) if _.endswith(File_Extension)]
+        Image_List = [fi for fi in os.walk(Folder_To_Rename) if fi.endswith(File_Extension)]
 
         if not len(Image_List) == 0:
             Image_With_Exif = Image_List[0]
