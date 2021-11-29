@@ -23,9 +23,12 @@ for folder in Folder_List:
     if not re.match(Check_for_aldready_dated_folders_patter, folder[:10]):
         Folder_To_Rename = Root_Folder + "\\" + folder
         Image_List = [_ for _ in os.listdir(Folder_To_Rename) if _.endswith(File_Extension)]
-        Image_With_Exif = Image_List[0]
-        date_Taken = str(Get_Exif_Date_Taken(Folder_To_Rename, Image_With_Exif))[:10].strip().replace(":","-")
-        Folder_New_Name = date_Taken + " - " + folder
-        os.rename(Folder_To_Rename, Root_Folder + "\\" + Folder_New_Name)
-        print(Folder_New_Name)
+
+        if not len(Image_List) == 0:
+            Image_With_Exif = Image_List[0]
+            date_Taken = str(Get_Exif_Date_Taken(Folder_To_Rename, Image_With_Exif))[:10].strip().replace(":","-")
+            Folder_New_Name = date_Taken + " - " + folder
+            os.rename(Folder_To_Rename, Root_Folder + "\\" + Folder_New_Name)
+            print(Folder_New_Name)
+        else: pass
 
