@@ -16,7 +16,7 @@ It also support "Folders in folders", if the first folder does not contain any i
 If it does not find any useful data, it will ignore that folder and continue.
 
 ## This script will also remove the PATH_LENGTH limit om windows.
-
+This is to remove the problem with accessing folders with really long names.
 
 ## How to use:
 
