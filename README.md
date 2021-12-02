@@ -15,6 +15,9 @@ YYYY-MM-DD - Original_Name (example: 2021-12-02 - Folder 1)
 It also support "Folders in folders", if the first folder does not contain any images with "Date-Taken" data it will continue into sub-folders.
 If it does not find any useful data, it will ignore that folder and continue.
 
+## This script will also remove the PATH_LENGTH limit om windows.
+
+
 ## How to use:
 
 Start the script either from terminal, or with EXE file.
