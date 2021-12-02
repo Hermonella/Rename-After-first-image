@@ -23,6 +23,6 @@ When it ask for "Root Folder" paste in a link to the folder containing the folde
 
 ## Compability:
 
-Windows: Tested   ✓
-MacOS:   Untested 🛇
+Windows: Tested   ✓  
+MacOS:   Untested 🛇  
 Linux:      Untested 🛇
